@@ -9,7 +9,7 @@ export function Footer() {
             <img
               src={logoImg}
               alt="Patritalent — Un saveur d'hier, talent d'aujourd'hui"
-              className="h-20 w-auto md:h-24"
+              className="h-24 w-auto md:h-32"
               loading="lazy"
             />
             <p className="serif text-xs italic text-ink/60">
