@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { n as toast, t as Toaster } from "../_libs/sonner.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-CrKcXmzI.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-H9F2XwRq.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var Toaster$1 = ({ ...props }) => {
@@ -59,7 +59,7 @@ function Nav() {
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 						src: logo_png_default,
 						alt: "Patritalent — Un saveur d'hier, talent d'aujourd'hui",
-						className: "h-12 w-auto md:h-14",
+						className: "h-24 w-auto md:h-28",
 						loading: "eager"
 					})
 				}),
@@ -1064,7 +1064,7 @@ function Footer() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 						src: logo_png_default,
 						alt: "Patritalent — Un saveur d'hier, talent d'aujourd'hui",
-						className: "h-20 w-auto md:h-24",
+						className: "h-32 w-auto md:h-48",
 						loading: "lazy"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "serif text-xs italic text-ink/60",
