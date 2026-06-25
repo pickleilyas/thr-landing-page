@@ -31,7 +31,7 @@ export function Nav() {
           <img
             src={logoImg}
             alt="Patritalent — Un saveur d'hier, talent d'aujourd'hui"
-            className="h-16 w-auto md:h-20"
+            className="h-24 w-auto md:h-28"
             loading="eager"
           />
         </a>
