@@ -1,0 +1,126 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-saffron: var(--saffron);
+  --color-terracotta: var(--terracotta);
+  --color-olive: var(--olive);
+  --color-brass: var(--brass);
+
+  --font-serif: "Bodoni Moda", "Times New Roman", serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.25rem;
+
+  /* Patritalent palette — Crimson, Gold, Cream, Ink (from logo) */
+  --cream: oklch(0.972 0.008 80);
+  --cream-deep: oklch(0.93 0.018 78);
+  --ink: oklch(0.16 0.012 40);
+  --saffron: oklch(0.72 0.13 78);      /* warm gold from mandala */
+  --terracotta: oklch(0.48 0.16 28);   /* deep crimson red from dragon */
+  --olive: oklch(0.55 0.09 55);        /* burnt copper accent */
+  --brass: oklch(0.78 0.11 82);        /* light gold */
+
+
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: oklch(0.97 0.015 80);
+  --card-foreground: var(--ink);
+  --popover: var(--cream);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--cream);
+  --secondary: var(--cream-deep);
+  --secondary-foreground: var(--ink);
+  --muted: var(--cream-deep);
+  --muted-foreground: oklch(0.42 0.025 55);
+  --accent: var(--saffron);
+  --accent-foreground: var(--ink);
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: var(--cream);
+  --border: oklch(0.85 0.025 70);
+  --input: oklch(0.88 0.02 70);
+  --ring: var(--saffron);
+
+  --gradient-saffron: linear-gradient(135deg, var(--saffron), var(--terracotta));
+  --gradient-warm: radial-gradient(ellipse at 30% 30%, oklch(0.85 0.08 70), oklch(0.55 0.12 35));
+  --shadow-warm: 0 30px 60px -30px oklch(0.35 0.1 40 / 0.35);
+  --shadow-soft: 0 10px 30px -15px oklch(0.3 0.05 50 / 0.25);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility serif {
+  font-family: var(--font-serif);
+}
+
+@utility kicker {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--terracotta);
+}
+
+@utility hairline {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ink), transparent);
+  opacity: 0.25;
+}
