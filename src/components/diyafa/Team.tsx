@@ -12,13 +12,13 @@ const teamMembers = [
   },
   {
     image: member2,
-    name: "Hajji M'barrek",
+    name: "Zguiri Zineb ",
     role: "",
     organization: ""
   },
   {
     image: member3,
-    name: "Zguiri Zineb",
+    name: "Hajji M'barrek",
     role: "",
     organization: ""
   }
