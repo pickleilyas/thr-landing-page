@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { PlateFrame } from "./PlateFrame";
-import dishImg from "@/assets/entree 3.jpeg";
+import dishImg from "@/assets/master.jpeg";
 
 const spices = [
-  { name: "Safran de Taliouine", note: "Filaments rouge profond" },
-  { name: "Smen beldi", note: "Beurre clarifié affiné" },
+  { name: "Pistil de Safran", note: "Filaments rouge profond" },
+  { name: "Smen beldi Doukalli", note: "Beurre clarifié affiné" },
   { name: "Fruits secs", note: "Pruneaux, amandes, abricots" },
   { name: "Cannelle de Ceylan", note: "Bâtons entiers infusés" },
   { name: "Fleur d'oranger", note: "Distillation des Doukkala" },

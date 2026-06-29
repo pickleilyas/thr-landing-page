@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { PlateFrame } from "./PlateFrame";
-import teaImg from "@/assets/cadre.jpeg";
+import teaImg from "@/assets/the.webp";
 
 export function TeaRitual() {
   return (

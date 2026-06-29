@@ -6,6 +6,7 @@ import entree1 from "@/assets/entree 1.jpeg";
 import entree2 from "@/assets/entree 2.jpeg";
 import entree3 from "@/assets/entree 3.jpeg";
 
+
 const dishes = [
   {
     n: "I",
@@ -16,15 +17,15 @@ const dishes = [
     variant: "saffron" as const,
     imageSrc: entree1,
   },
-  {
-    n: "II",
-    name: "Khobiza & Épinard",
-    sub: "revisités",
-    desc: "Mauve sauvage des champs, épinards tendres, citron confit et huile d'olive première pression à froid.",
-    signature: "Citron confit",
-    variant: "olive" as const,
-    imageSrc: entree2,
-  },
+{
+  n: "II",
+  name: "Tektouka",
+  sub: "à la marocaine",
+  desc: "Poivrons multicolores rôtis, sauce tomate mijotée, coriandre fraîche et mélange d'épices marocaines.",
+  signature: "Poivrons rôtis",
+  variant: "olive" as const,
+  imageSrc: entree2,
+},
   {
     n: "III",
     name: "Zalouk d'Aubergine",
