@@ -62,21 +62,6 @@ export function PlateFrame({
       />
       {/* spotlight */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_25%,oklch(1_0_0/0.35),transparent_55%)]" />
-      {/* monogram */}
-      <div className="absolute inset-0 grid place-items-center">
-        <div className="flex flex-col items-center gap-3 text-cream/85">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" className="opacity-70">
-            <path
-              d="M28 4 L52 28 L28 52 L4 28 Z M28 14 L42 28 L28 42 L14 28 Z"
-              stroke="currentColor"
-              strokeWidth="1"
-              fill="none"
-            />
-            <circle cx="28" cy="28" r="3" fill="currentColor" />
-          </svg>
-          <span className="serif text-2xl italic tracking-wide">Diyafa</span>
-        </div>
-      </div>
       {/* caption */}
       <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5">
         <span className="serif text-xs italic uppercase tracking-[0.25em] text-cream/80">

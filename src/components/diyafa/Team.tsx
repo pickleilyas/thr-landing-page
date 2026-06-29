@@ -3,6 +3,27 @@ import member1 from "@/assets/membre1.jpeg";
 import member2 from "@/assets/membre2.jpeg";
 import member3 from "@/assets/membre3.jpeg";
 
+const teamMembers = [
+  {
+    image: member1,
+    name: "Halima Boudili",
+    role: "Service art de table",
+    organization: "Cité des Métiers et des Compétences Casablanca-Settat"
+  },
+  {
+    image: member2,
+    name: "Hajji M'barrek",
+    role: "",
+    organization: ""
+  },
+  {
+    image: member3,
+    name: "Zguiri Zineb",
+    role: "",
+    organization: ""
+  }
+];
+
 export function Team() {
   return (
     <section id="equipe" className="relative px-6 py-24 md:px-10 md:py-32">
@@ -15,21 +36,40 @@ export function Team() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          {[member1, member2, member3].map((member, idx) => (
+          {teamMembers.map((member, idx) => (
             <motion.div 
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, delay: idx * 0.15 }}
-              className="group relative aspect-[3/4] overflow-hidden"
+              className="group relative flex flex-col"
             >
-              <img 
-                src={member} 
-                alt={`Membre de l'équipe ${idx + 1}`} 
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-ink/10 mix-blend-multiply transition-opacity group-hover:opacity-0" />
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <img 
+                  src={member.image} 
+                  alt={member.name || `Membre de l'équipe ${idx + 1}`} 
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-ink/10 mix-blend-multiply transition-opacity group-hover:opacity-0" />
+              </div>
+              
+              {(member.name || member.role) && (
+                <div className="mt-6 text-center">
+                  {member.name && <h3 className="serif text-xl">{member.name}</h3>}
+                  {member.role && (
+                    <p className="mt-2 text-sm text-ink/70">
+                      {member.role}
+                      {member.organization && (
+                        <>
+                          <br />
+                          <span className="text-xs text-ink/50 uppercase tracking-[0.1em]">{member.organization}</span>
+                        </>
+                      )}
+                    </p>
+                  )}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
