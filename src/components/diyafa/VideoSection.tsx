@@ -1,7 +1,23 @@
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import { ZelligeDivider } from "./ZelligeDivider";
+import videoFile from "@/assets/video.mp4";
 
 export function VideoSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <section className="px-6 py-20 md:px-10 md:py-28">
       <div className="mx-auto max-w-6xl">
@@ -25,36 +41,32 @@ export function VideoSection() {
           className="relative mt-12 aspect-video w-full overflow-hidden border border-ink/15"
           style={{ boxShadow: "var(--shadow-warm)" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.25_0.04_50)] via-[oklch(0.18_0.03_40)] to-[oklch(0.12_0.02_30)]" />
-          <div
-            className="absolute inset-0 opacity-25"
-            style={{
-              backgroundImage:
-                "radial-gradient(oklch(1 0 0 / 0.4) 1px, transparent 1px)",
-              backgroundSize: "4px 4px",
-            }}
+          <video
+            ref={videoRef}
+            src={videoFile}
+            className="h-full w-full object-cover"
+            playsInline
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
+            onEnded={() => setIsPlaying(false)}
+            controls={isPlaying}
           />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(0.5_0.15_50/0.4),transparent_70%)]" />
 
-          <button
-            type="button"
-            aria-label="Lire la vidéo"
-            className="group absolute inset-0 grid place-items-center"
-          >
-            <span className="relative grid h-24 w-24 place-items-center rounded-full border border-cream/40 backdrop-blur-sm transition group-hover:scale-110 group-hover:border-saffron">
-              <span className="absolute inset-0 animate-ping rounded-full border border-cream/30" />
-              <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor" className="ml-1 text-cream">
-                <path d="M0 0 L22 13 L0 26 Z" />
-              </svg>
-            </span>
-          </button>
-
-          <div className="absolute inset-x-0 bottom-0 flex items-center justify-between px-6 py-5 text-cream/70">
-            <span className="serif text-xs italic uppercase tracking-[0.3em]">
-              Teaser — La table dressée
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.3em]">00:00 / 02:14</span>
-          </div>
+          {!isPlaying && (
+            <button
+              onClick={togglePlay}
+              type="button"
+              aria-label="Lire la vidéo"
+              className="group absolute inset-0 grid place-items-center bg-black/30 transition-colors hover:bg-black/40"
+            >
+              <span className="relative grid h-24 w-24 place-items-center rounded-full border border-cream/40 backdrop-blur-sm transition group-hover:scale-110 group-hover:border-saffron">
+                <span className="absolute inset-0 animate-ping rounded-full border border-cream/30" />
+                <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor" className="ml-1 text-cream">
+                  <path d="M0 0 L22 13 L0 26 Z" />
+                </svg>
+              </span>
+            </button>
+          )}
         </motion.div>
       </div>
     </section>

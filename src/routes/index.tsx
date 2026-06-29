@@ -8,6 +8,7 @@ import { SignatureDish } from "@/components/diyafa/SignatureDish";
 import { Accompaniments } from "@/components/diyafa/Accompaniments";
 import { TeaRitual } from "@/components/diyafa/TeaRitual";
 import { ReservationForm } from "@/components/diyafa/ReservationForm";
+import { Team } from "@/components/diyafa/Team";
 import { Footer } from "@/components/diyafa/Footer";
 
 export const Route = createFileRoute("/")({
@@ -41,6 +42,7 @@ function Index() {
       <SignatureDish />
       <Accompaniments />
       <TeaRitual />
+      <Team />
       <ReservationForm />
       <Footer />
       <Toaster position="bottom-right" />
