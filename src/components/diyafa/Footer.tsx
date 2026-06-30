@@ -1,5 +1,5 @@
 import logoImg from "@/assets/logo png.png";
-import cmcLogo from "@/assets/cmc.jpg";
+import cmcLogo from "@/assets/cmc.png";
 import officeLogo from "@/assets/office.png";
 import tyabLogo from "@/assets/tyab.png";
 
