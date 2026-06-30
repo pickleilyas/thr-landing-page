@@ -9,6 +9,7 @@ import { Accompaniments } from "@/components/diyafa/Accompaniments";
 import { TeaRitual } from "@/components/diyafa/TeaRitual";
 import { ReservationForm } from "@/components/diyafa/ReservationForm";
 import { Team } from "@/components/diyafa/Team";
+import { Reviews } from "@/components/diyafa/Reviews";
 import { Footer } from "@/components/diyafa/Footer";
 
 export const Route = createFileRoute("/")({
@@ -43,6 +44,7 @@ function Index() {
       <Accompaniments />
       <TeaRitual />
       <Team />
+      <Reviews />
       <ReservationForm />
       <Footer />
       <Toaster position="bottom-right" />

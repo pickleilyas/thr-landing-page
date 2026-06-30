@@ -23,7 +23,7 @@ export function ReservationForm() {
       <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[1fr_1.1fr] md:gap-20">
         <div>
           <span className="kicker text-xs uppercase tracking-[0.3em] text-saffron">
-            Chapitre 07 — L'invitation
+            Chapitre 09 — L'invitation
           </span>
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
