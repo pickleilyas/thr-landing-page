@@ -13,14 +13,14 @@ const teamMembers = [
   {
     image: member2,
     name: "Zguiri Zineb ",
-    role: "",
-    organization: ""
+    role: "Service art culinaire",
+    organization: "Institut spécialisé d’hôtellerie et de tourisme El haouzia"
   },
   {
     image: member3,
     name: "Hajji M'barrek",
-    role: "",
-    organization: ""
+    role: "Service art culinaire",
+    organization: "Institut spécialisé d’hôtellerie et de tourisme El haouzia"
   }
 ];
 

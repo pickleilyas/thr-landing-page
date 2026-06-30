@@ -51,7 +51,7 @@ export function SignatureDish() {
             Dokkali.
           </motion.h2>
           <p className="mt-8 max-w-xl text-base leading-relaxed text-cream/75">
-            Confite des heures durant dans son jus, l'épaule s'effiloche sous la
+            Confite durant des heures dans son jus, l'épaule s'effiloche sous la
             cuillère. Elle rencontre les fruits secs caramélisés et le velouté
             d'épices anciennes — symbole de générosité, geste des grandes occasions
             et signature d'une table où l'on s'attable longtemps.
