@@ -1,4 +1,7 @@
 import logoImg from "@/assets/logo png.png";
+import cmcLogo from "@/assets/cmc.jpg";
+import officeLogo from "@/assets/office.png";
+import tyabLogo from "@/assets/tyab.png";
 
 export function Footer() {
   return (
@@ -6,12 +9,35 @@ export function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-10 md:flex-row md:items-end md:justify-between">
         <div className="max-w-md">
           <div className="flex flex-col items-start gap-4">
-            <img
-              src={logoImg}
-              alt="Patritalent — Un saveur d'hier, talent d'aujourd'hui"
-              className="h-[120px] w-auto md:h-[160px]"
-              loading="lazy"
-            />
+            <div className="flex flex-wrap items-center gap-4">
+              <img
+                src={logoImg}
+                alt="Patritalent — Un saveur d'hier, talent d'aujourd'hui"
+                className="h-[80px] w-auto md:h-[110px]"
+                loading="lazy"
+              />
+              <span className="hidden h-12 w-px bg-ink/15 sm:block" />
+              <div className="flex items-center gap-3">
+                <img
+                  src={officeLogo}
+                  alt="Office"
+                  className="h-8 w-auto object-contain md:h-12"
+                  loading="lazy"
+                />
+                <img
+                  src={cmcLogo}
+                  alt="CMC"
+                  className="h-8 w-auto object-contain md:h-12"
+                  loading="lazy"
+                />
+                <img
+                  src={tyabLogo}
+                  alt="Tyab"
+                  className="h-8 w-auto object-contain md:h-12"
+                  loading="lazy"
+                />
+              </div>
+            </div>
             <p className="serif text-xs italic text-ink/60">
               Concours de l'Hospitalité à travers la Gastronomie
             </p>

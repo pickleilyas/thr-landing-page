@@ -25,7 +25,6 @@ const ratios = {
 
 export function PlateFrame({
   label,
-  caption,
   variant = "warm",
   className = "",
   ratio = "portrait",
@@ -62,22 +61,7 @@ export function PlateFrame({
       />
       {/* spotlight */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_25%,oklch(1_0_0/0.35),transparent_55%)]" />
-      {/* caption */}
-      <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5">
-        <span className="serif text-xs italic uppercase tracking-[0.25em] text-cream/80">
-          {label}
-        </span>
-        {caption && (
-          <span className="text-[10px] uppercase tracking-[0.2em] text-cream/60">
-            {caption}
-          </span>
-        )}
-      </figcaption>
-      {/* corner mark */}
-      <span className="absolute left-5 top-5 h-px w-8 bg-cream/60" />
-      <span className="absolute left-5 top-5 h-8 w-px bg-cream/60" />
-      <span className="absolute right-5 top-5 h-px w-8 bg-cream/60" />
-      <span className="absolute right-5 top-5 h-8 w-px bg-cream/60" />
+
     </motion.figure>
   );
 }

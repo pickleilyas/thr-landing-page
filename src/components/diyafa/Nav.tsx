@@ -1,5 +1,9 @@
+
 import { useEffect, useState } from "react";
 import logoImg from "@/assets/logo png.png";
+import cmcLogo from "@/assets/cmc.jpg";
+import officeLogo from "@/assets/office.png";
+import tyabLogo from "@/assets/tyab.png";
 
 const links = [
   { href: "#heritage", label: "Héritage" },
@@ -27,14 +31,34 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-        <a href="#top" className="flex items-center">
-          <img
-            src={logoImg}
-            alt="Patritalent — Un saveur d'hier, talent d'aujourd'hui"
-            className="h-[110px] w-auto md:h-[140px]"
-            loading="eager"
-          />
-        </a>
+        <div className="flex items-center gap-3 md:gap-5">
+          <a href="#top" className="flex items-center">
+            <img
+              src={logoImg}
+              alt="Patritalent — Un saveur d'hier, talent d'aujourd'hui"
+              className="h-[70px] w-auto md:h-[100px]"
+              loading="eager"
+            />
+          </a>
+          <span className="h-8 w-px bg-ink/15 md:h-12" />
+          <div className="flex items-center gap-2 md:gap-4">
+            <img
+              src={officeLogo}
+              alt="Office"
+              className="h-8 w-auto object-contain md:h-12"
+            />
+            <img
+              src={cmcLogo}
+              alt="CMC"
+              className="h-8 w-auto object-contain md:h-12"
+            />
+            <img
+              src={tyabLogo}
+              alt="Tyab"
+              className="h-8 w-auto object-contain md:h-12"
+            />
+          </div>
+        </div>
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
             <a
